@@ -200,21 +200,13 @@ git push [...options] <repo name> <branch name>
 Failed to push because branch is behind its remote couterpart
 
 ```diff
-+ Green
-- Red
-! Orange
-@@ Pink @@
-# Gray
-```
-
-```
 $ git push
 ! [rejected]    master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/KriskoTamas/git-test.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+- error: failed to push some refs to 'https://github.com/KriskoTamas/git-test.git'
+! hint: Updates were rejected because the tip of your current branch is behind
+! hint: its remote counterpart. Integrate the remote changes (e.g.
+! hint: 'git pull ...') before pushing again.
+! hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
 
