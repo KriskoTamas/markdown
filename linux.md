@@ -1,34 +1,140 @@
 # Linux cheat sheet
 
+## Help
+Show help page
+```
+help
+```
+
+## Util commands
+Clear terminal display
+```
+clear
+```
+
+Show terminal history
+```
+history
+```
+
+Show current date and time
+```
+date
+```
+
+Display disk filesystem information
+```
+df
+```
+
+Print text
+```
+echo [text]
+```
+
+Write text to file
+```
+echo [text] > [file]
+```
+
+Append to end of file
+```
+echo [text] >> [file]
+```
+
+Display file contents
+```
+cat [file]
+```
+
+Display last 10 rows of file
+```
+tail [file]
+```
+
+Display last N rows of file
+```
+tail -n [number] [file]
+```
+
 ## Managing files
+
+### Creating
+
 Create directory
-```sh
+```
 mkdir [directory] [directory...]
 ```
 
 Create file
-```sh
+```
 touch [file] [file...]
 ```
 
+### Deleting
+
 Remove empty directory
-```sh
+```
 rmdir [directory] [directory...]
 ```
 
 Remove directory and its contents
-```sh
+```
 rm -r [directory] [directory...]
 ```
 
 Remove file or files
-```sh
+```
 rm [file] [file...]
+```
+
+### Copying
+Copy to another directory
+```
+cp [sourcePath] [targetPath]
+```
+
+Copy and rename file or directory
+```
+cp [sourcePath] [targetPath]/[newName]
+```
+
+### Moving
+Files and directories can be moved with the same `mv` command
+
+Move to another directory
+```
+mv [sourcePath] [targetPath]
+```
+
+Move up one level
+```
+mv [sourcePath] .
+mv [sourcePath] ..
+mv [sourcePath] ./.
+```
+
+Move up two levels
+```
+mv [sourcePath] ./..
+mv [sourcePath] ../.
+```
+
+## Renaming
+
+Rename file or directory
+```
+mv [oldName] [newName]
+```
+
+Rename and move file or directory
+```
+mv [sourcePath] [targetPath]/[newName]
 ```
 
 ### Managing permissions
 Change permissions of one or more files
-```sh
+```
 chmod [mode] [file...]
 ```
 
@@ -82,9 +188,25 @@ Few examples:
 - `111`: Sets execute permission to all users.
 - `0` or `-`: No permission to all.
 
+## Changing directory
+Change current working directory to HOME
+```
+cd
+```
+
+Change current working directory to the specified path
+```
+cd [path]
+```
+
+Print working directory
+```
+pwd
+```
+
 ## Listing files
 List files in current directory
-```sh
+```
 ls [options...]
 ```
 
@@ -103,13 +225,13 @@ Vim is an advanced and highly configurable text editor built to enable efficient
 
 ### Using Vim
 Open Vim
-```sh
+```
 vi
 vim
 ```
 
 Edit specific files
-```sh
+```
 vi [file...]
 vim [file...]
 ```

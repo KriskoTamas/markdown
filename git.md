@@ -142,6 +142,7 @@ git commit -m <message> -m <optionalMessage>
 Commit both staged and unstaged files but not new files (only modified and deleted)
 ```sh
 git commit -a -m <message>
+git commit -am <message>
 ```
 
 There are cases, when you mess up your commit (typo in commit message or missed out files), in these cases you can use the `--amend` flag

@@ -36,9 +36,13 @@ Worker nodes within the Kubernetes cluster are used to run containerized applica
 Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
 
 ## Kubelet
+The kubelet is the primary "node agent" that runs on each node. It can register the node with the apiserver using one of: the hostname; a flag to override the hostname; or specific logic for a cloud provider.
 
 ## ETCD
 ETCD is an open source distributed key-value store used to hold and manage the critical information that distributed systems need to keep running. Most notably, it manages the configuration data, state data, and metadata for Kubernetes, the popular container orchestration platform.
+
+### What does etcd stand for?
+The name "etcd" comes from a naming convention within the Linux directory structure: In UNIX, all system configuration files for a single system are contained in a folder called "/etc;" "d" stands for "distributed."
 
 ## Docker
 Docker is an open source **containerization platform**. It enables developers to package applications into containers - standardized executable components combining application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.
