@@ -17,6 +17,8 @@ Kubernetes is an open source **container orchestration tool** that manages conta
 
 Kubernetes includes built-in commands for deploying applications, rolling out changes to your applications, scaling your applications up and down to fit changing needs, monitoring your applications, and more, making it easier to manage applications.
 
+Kubernetes is a distributed system, so it needs a distributed data store like etcd.
+
 ## Container
 
 ## Cluster
@@ -36,6 +38,7 @@ Pods are the smallest deployable units of computing that you can create and mana
 ## Kubelet
 
 ## ETCD
+ETCD is an open source distributed key-value store used to hold and manage the critical information that distributed systems need to keep running. Most notably, it manages the configuration data, state data, and metadata for Kubernetes, the popular container orchestration platform.
 
 ## Docker
 Docker is an open source **containerization platform**. It enables developers to package applications into containers - standardized executable components combining application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.

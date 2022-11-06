@@ -1,5 +1,97 @@
 # Linux cheat sheet
 
+## Managing files
+Create directory
+```sh
+mkdir [directory] [directory...]
+```
+
+Create file
+```sh
+touch [file] [file...]
+```
+
+Remove empty directory
+```sh
+rmdir [directory] [directory...]
+```
+
+Remove directory and its contents
+```sh
+rm -r [directory] [directory...]
+```
+
+Remove file or files
+```sh
+rm [file] [file...]
+```
+
+### Managing permissions
+Change permissions of one or more files
+```sh
+chmod [mode] [file...]
+```
+
+**[mode]** can be:
+- Symbolic mode
+- Numeric mode
+
+When using *symbolic* mode, we can use the following syntax to manage permissions:
+**[who][what][which]**
+
+**[who]** can be:
+
+- `u`: User, meaning the owner of the file.
+- `g`: Group, meaning members of the group the file belongs to.
+- `o`: Others, meaning people not governed by the u and g permissions.
+- `a`: All, meaning all of the above.
+
+**[what]** can be:
+
+- `+`: Plus sign. Grants the permission. The permission is added to the existing permissions.
+- `–`: Minus sign. Removes the permission.
+- `=`: Equals sign. Set a permission and remove others.
+
+**[which]** can be:
+
+- `r`: The read permission.
+- `w`: The write permission.
+- `x`: The execute permission.
+
+Few examples:
+- `a+x`: Adds execute permission for all.
+- `g-w`: Removes write permission from group.
+- `u=rwx`: Sets read, write and execute permissions for the user.
+- `u=rw,og=r`: Sets read and write for user and read for others and group.
+
+When using *numeric* mode, we can use the following syntax to manage permissions:
+**[user][group][others]**
+
+Each of these represented by a number:
+
+- `0`: No permission
+- `1`: Execute
+- `2`: Write
+- `4`: Read
+
+Basically, you add up the numbers depending on the level of permission you want to give.
+
+Few examples:
+- `777`: Sets all permissions to all users.
+- `744`: Sets read, write and execute for user, read for group and others.
+- `111`: Sets execute permission to all users.
+- `0` or `-`: No permission to all.
+
+## Listing files
+List files in current directory
+```sh
+ls [options...]
+```
+
+`-a` or `--all`: Include entries starting with `.`
+
+`-l`: Use a long listing format
+
 ## Vim text editor
 Improved version of Vi text editor
 
@@ -8,6 +100,19 @@ VIM - Vi IMproved
 Vim official site: https://www.vim.org/
 
 Vim is an advanced and highly configurable text editor built to enable efficient text editing.
+
+### Using Vim
+Open Vim
+```sh
+vi
+vim
+```
+
+Edit specific files
+```sh
+vi [file...]
+vim [file...]
+```
 
 ### Commands
 
