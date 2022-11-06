@@ -27,6 +27,16 @@ Display disk filesystem information
 df
 ```
 
+Print environment variables
+```
+printenv
+```
+
+Print current shell
+```
+echo $SHELL
+```
+
 Print text
 ```
 echo [text]
