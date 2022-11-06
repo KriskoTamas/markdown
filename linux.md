@@ -120,7 +120,7 @@ mv [sourcePath] ./..
 mv [sourcePath] ../.
 ```
 
-## Renaming
+### Renaming
 
 Rename file or directory
 ```
