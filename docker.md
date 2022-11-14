@@ -45,13 +45,11 @@ docker start <container>
 docker start <container> <container>
 ```
 
-**`<container>` can be:**
+**`<container>`** can be:
 
-Container name
-
-Container ID
-
-First few characters (unique part) of container ID
+- Container name
+- Container ID
+- First few characters (unique part) of container ID
 
 When not giving a unique ID, an error will be shown:
 ```diff

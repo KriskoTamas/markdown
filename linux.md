@@ -6,6 +6,11 @@ Show help page
 help
 ```
 
+Show help related to command
+```
+[command] --help
+```
+
 ## Util commands
 Clear terminal display
 ```
@@ -15,6 +20,18 @@ clear
 Show terminal history
 ```
 history
+```
+
+Execute latest command
+```
+!!
+```
+
+Declare variable
+
+Declare a variable named `var`
+```
+var=123
 ```
 
 Show current date and time
@@ -52,9 +69,37 @@ Append to end of file
 echo [text] >> [file]
 ```
 
+Append with for loop
+
+for loop syntax: **`{[from]..[to]..[increment]}`**
+
+```sh
+for i in {0..10..2}; do echo $i >> [file]; done
+```
+
+Create files with for loop
+```sh
+for i in {1..10}; do touch "$i.txt"; done
+```
+
+Write filename in all .txt files
+```sh
+for file in *.txt; do echo "filename: $file" >> "$file"; done
+```
+
 Display file contents
 ```
 cat [file]
+```
+
+Display first 10 rows of file
+```
+head [file]
+```
+
+Display first N rows of file
+```
+head -n [number] [file]
 ```
 
 Display last 10 rows of file
@@ -65,6 +110,11 @@ tail [file]
 Display last N rows of file
 ```
 tail -n [number] [file]
+```
+
+Edit file contents
+```
+nano [file]
 ```
 
 ## Managing files

@@ -43,9 +43,10 @@ git log --author=<author>
 
 ### Filter by date
 
-Date can be:
-- relative like "yesterday" or "today"
-- relative, like "9:00" or "9AM", which means today at 9:00
+**`<date>`** can be:
+- a full date string
+- relative like `yesterday` or `today`
+- relative like `9:00` or `9AM`, which means today at 9:00
 ```sh
 git log --after=<date>
 ```
@@ -169,7 +170,7 @@ git reset [--soft | --mixed | --hard] <commit>
 git reset --hard HEAD@{1}
 ```
 
-**`<commit>` can be:**
+**`<commit>`** can be:
 
 `Commit hash or the beginning of the hash (at least the first 4 characters)`: Resets the HEAD to that specific commit
 
