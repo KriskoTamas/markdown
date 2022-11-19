@@ -33,12 +33,6 @@ Type `:q` for exit
 git log
 ```
 
-## Blame
-Show what revision and author last modified each line of a file
-```sh
-git blame
-```
-
 ```sh
 git log -n <number>
 ```
@@ -63,6 +57,12 @@ git log --before=<date>
 > Relative like `yesterday` or `today`
 > 
 > Relative like `9:00` or `9AM`, which means today at 9:00
+
+## Blame
+Show what revision and author last modified each line of a file
+```sh
+git blame
+```
 
 ## Status
 Show the state of the repository and the staging area. List the changed files and those you need to stage and commit.
@@ -181,11 +181,6 @@ git commit --fixup=<commit>
 git reset [--soft | --mixed | --hard] <commit>
 ```
 
-**Undo Reset:**
-```sh
-git reset --hard HEAD@{1}
-```
-
 > **`<commit>`** can be:
 >
 > `Commit hash or the beginning of the hash (at least the first 4 characters)`: Resets the HEAD to that specific commit
@@ -197,6 +192,11 @@ git reset --hard HEAD@{1}
 > `HEAD~1`: Resets last commit
 >
 > `HEAD~10`: Resets last 10 commits
+
+**Undo Reset:**
+```sh
+git reset --hard HEAD@{1}
+```
 
 
 ### Links
