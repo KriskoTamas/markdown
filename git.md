@@ -48,11 +48,6 @@ git log --author=<author>
 ```
 
 ### Filter by date
-
-**`<date>`** can be:
-- a full date string
-- relative like `yesterday` or `today`
-- relative like `9:00` or `9AM`, which means today at 9:00
 ```sh
 git log --after=<date>
 ```
@@ -60,6 +55,14 @@ git log --after=<date>
 ```sh
 git log --before=<date>
 ```
+
+> **`<date>`** can be:
+> 
+> A full date string
+> 
+> Relative like `yesterday` or `today`
+> 
+> Relative like `9:00` or `9AM`, which means today at 9:00
 
 ## Status
 Show the state of the repository and the staging area. List the changed files and those you need to stage and commit.
@@ -183,23 +186,17 @@ git reset [--soft | --mixed | --hard] <commit>
 git reset --hard HEAD@{1}
 ```
 
-**`<branch>`** can be:
-
-A branch on the local repository, e.g.: `my-other-branch`
-
-A branch on a remote repository, e.g.: `origin/master`
-
-**`<commit>`** can be:
-
-`Commit hash or the beginning of the hash (at least the first 4 characters)`: Resets the HEAD to that specific commit
-
-`HEAD^`: Resets last commit
-
-`HEAD^^`: Resets last 2 commits
-
-`HEAD~1`: Resets last commit
-
-`HEAD~10`: Resets last 10 commits
+> **`<commit>`** can be:
+>
+> `Commit hash or the beginning of the hash (at least the first 4 characters)`: Resets the HEAD to that specific commit
+>
+> `HEAD^`: Resets last commit
+>
+> `HEAD^^`: Resets last 2 commits
+>
+> `HEAD~1`: Resets last commit
+>
+> `HEAD~10`: Resets last 10 commits
 
 
 ### Links
@@ -317,6 +314,12 @@ Bring commits from another branch that are ahead of the current branch
 ```sh
 git rebase <branch>
 ```
+
+> **`<branch>`** can be:
+> 
+> A branch on the local repository, e.g.: `my-other-branch`
+> 
+> A branch on a remote repository, e.g.: `origin/master`
 
 Undo an ongoing rebase
 ```sh
@@ -442,5 +445,5 @@ Repository name is usually `origin`
 Branch name is usually `main` (previously `master`)
 
 ```sh
-letter=e; echo content >> $letter.txt; git add $letter.txt;  git commit -m "add $letter.txt"
+letter=a; echo content >> $letter.txt; git add $letter.txt;  git commit -m "add $letter.txt"
 ```
