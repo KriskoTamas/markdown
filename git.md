@@ -183,6 +183,12 @@ git reset [--soft | --mixed | --hard] <commit>
 git reset --hard HEAD@{1}
 ```
 
+**`<branch>`** can be:
+
+A branch on the local repository, e.g.: `my-other-branch`
+
+A branch on a remote repository, e.g.: `origin/master`
+
 **`<commit>`** can be:
 
 `Commit hash or the beginning of the hash (at least the first 4 characters)`: Resets the HEAD to that specific commit
@@ -312,7 +318,20 @@ Bring commits from another branch that are ahead of the current branch
 git rebase <branch>
 ```
 
+Undo an ongoing rebase
+```sh
+git rebase --abort
+```
+
+Continue an ongoing rebase
+```sh
+git rebase --continue
+```
+
 ### Interactive rebase
+Interactive rebase can be used to rearrange or meld commits into each other
+
+After running the interactive rebase command, an editor will show up (usually VIM) to pick, rearrange and squash commits.
 
 Combine last 3 commits
 ```sh
