@@ -33,6 +33,12 @@ Type `:q` for exit
 git log
 ```
 
+## Blame
+Show what revision and author last modified each line of a file
+```sh
+git blame
+```
+
 ```sh
 git log -n <number>
 ```
@@ -149,6 +155,13 @@ git commit -am <message>
 There are cases, when you mess up your commit (typo in commit message or missed out files), in these cases you can use the `--amend` flag
 ```sh
 git commit --amend
+```
+
+Fixup commit
+
+Create a new commit 
+```sh
+git commit --fixup=<commit>
 ```
 
 ## Reset
@@ -280,6 +293,7 @@ Delete a branch
 ```sh
 git branch [-d | --delete] <branch>
 ```
+**Note:** Checked out branch cannot be deleted. If you are on the branch you want to delete, first you need to checkout to another branch to delete it.
 
 Switch to another branch
 ```sh
@@ -296,6 +310,18 @@ git merge <branch>
 Bring commits from another branch that are ahead of the current branch
 ```sh
 git rebase <branch>
+```
+
+### Interactive rebase
+
+Combine last 3 commits
+```sh
+git rebase -i HEAD~3
+```
+
+Combine commits with initial commit
+```sh
+git rebase -i --root master
 ```
 
 ## Cherrypick
@@ -351,12 +377,14 @@ git reflog -n <number>
 
 ## Diff
 Show changes between commits, commit and working tree
+
+Compare current HEAD with another commit
 ```sh
-git diff
+git diff <commit>
 ```
 
 ## Fork
-A fork creates a completely **independent copy** of Git repository.
+A fork creates a completely **independent copy** of a Git repository.
 
 ## Pull request
 A pull request (PR) is an event in Git where a contributor asks a maintainer of a Git repository to review code they want to **merge into** a project.
@@ -370,11 +398,30 @@ Gitignore generator: https://www.toptal.com/developers/gitignore/
 
 # Git GUI clients
 GitHub Desktop: https://desktop.github.com/
+
 GitKraken: https://www.gitkraken.com/
+
 SourceTree: https://www.sourcetreeapp.com/
+
+## Gitk
+Gitk is a graphical repository browser.
+
+Open Gitk
+```sh
+gitk
+```
+
+## Git GUI
+```sh
+git gui
+```
 
 ## Misc
 
 Repository name is usually `origin`
 
 Branch name is usually `main` (previously `master`)
+
+```sh
+letter=e; echo content >> $letter.txt; git add $letter.txt;  git commit -m "add $letter.txt"
+```
