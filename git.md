@@ -298,6 +298,11 @@ git branch [-d | --delete] <branch>
 ```
 **Note:** Checked out branch cannot be deleted. If you are on the branch you want to delete, first you need to checkout to another branch to delete it.
 
+Delete a branch on remote
+```sh
+git push origin [-d | --delete] <branch>
+```
+
 Switch to another branch
 ```sh
 git checkout <branch>
@@ -361,6 +366,11 @@ git checkout .
 git checkout *
 git checkout <file>
 git checkout <file> <file>
+```
+
+Checkout to previous branch
+```sh
+git checkout -
 ```
 
 ## Stash

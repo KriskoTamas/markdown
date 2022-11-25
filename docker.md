@@ -8,24 +8,24 @@ Docker documentation: https://docs.docker.com/
 Docker images: https://hub.docker.com/search?q=&type=image
 
 ## Check docker version
-```sh
+```
 git --version
 ```
 
 ## Show Docker info
-```sh
+```
 docker info
 ```
 
 ## Help
-```sh
+```
 docker --help
 docker <command> --help
 ```
 
 ## Show containers
 Show running containers
-```sh
+```
 docker ps [...options]
 ```
 **Options:**
@@ -40,7 +40,7 @@ docker ps [...options]
 
 ## Start container
 
-```sh
+```
 docker start <container>
 docker start <container> <container>
 ```
@@ -57,41 +57,41 @@ When not giving a unique ID, an error will be shown:
 ```
 
 ## Stop container
-```sh
+```
 docker stop <container>
 docker stop <container> <container>
 ```
 
 ## Restart container
-```sh
+```
 docker restart <container>
 docker restart <container> <container>
 ```
 
 ## Create a container
 Create a container and print out its id
-```sh
+```
 docker create <image>
 ```
 
 ## Rename a container
-```sh
+```
 docker rename <container> <newName>
 ```
 
 ## Remove container
-```sh
+```
 docker rm <container>
 docker rm <container> <container>
 ```
 
 ## Create and start a container
-```sh
+```
 docker run <image>
 ```
 
 ## Run command on container
-```sh
+```
 docker exec -it <container>
 ```
 
